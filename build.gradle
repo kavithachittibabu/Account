@@ -7,7 +7,18 @@ buildscript {
   }
 }
 apply plugin: 'spring-boot'
- 
+apply plugin: 'checkstyle'
+
+
+
+checkstyle {
+
+    configFile = rootProject.file("config/checkstyle/checkstyle.xml");
+    showViolations = true
+    ignoreFailures = true
+}
+
+
 repositories { jcenter()
 }
 dependencies {
