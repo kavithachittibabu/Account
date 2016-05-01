@@ -24,7 +24,7 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = AccountsBoot.class)
-@WebIntegrationTest
+@WebIntegrationTest("server.port:9000")
 public class AccountTests{
 	public static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 	
