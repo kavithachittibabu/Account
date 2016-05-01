@@ -66,7 +66,7 @@ public class AccountTests{
 		Accounts accountToSave = new Accounts();
 		accountToSave.setInitialBalance(500.00);
 		accountToSave.setAccountId("123");
-		Accounts accountnew = rt.postForObject("http://localhost:8888/accounts/new", accountToSave, Accounts.class);
+		Accounts accountnew = rt.postForObject("http://localhost:9000/accounts/new", accountToSave, Accounts.class);
 		
 		assertEquals("Account id didnt match", "123", accountnew.getAccountId());
 		assertNotNull("Id should not be null", accountnew.getId());
