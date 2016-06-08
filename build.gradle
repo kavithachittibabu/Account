@@ -16,7 +16,10 @@ checkstyle {
     showViolations = true
     ignoreFailures = true
 }
-
+bootRepackage {
+    withJarTask jar
+    classifier = "boot"
+}
 
 repositories { jcenter()
 }
